@@ -191,6 +191,28 @@ def downData():
     
     file_df.to_csv(file_direc + "finances_" + date_time + ".csv", index=False)
     
+    down_count = 0
+    
+    while down_count != 3:
+        
+        os.system('cls')
+        
+        downloadAnimation()
+        
+        time.sleep(2)
+        
+        down_count += 1
+    
+    os.system('cls')
+    
+    print(fox_logo_saved)
+        
+        
+        
+        
+        
+        
+    
     input("File saved! Press enter to continue.")
     
     mainMenu()
