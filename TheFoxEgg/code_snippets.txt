@@ -1,0 +1,17 @@
+class WelcomeMessage(wx.Dialog):
+
+    def __init__(self, *args, **kwargs):
+        super(WelcomeMessage, self).__init__(*args, **kwargs)
+
+        self.SetSize((400, 300))
+        self.SetTitle("Welcome to the Fox's Egg, and thanks for your patronage!")
+        self.Centre()
+
+        self.timer = wx.Timer(self)
+        self.Bind(wx.EVT_TIMER, self.OnTimer)
+
+        self.timer.Start(2000)
+
+    def OnTimer(self, event):
+        self.Close()
+    
